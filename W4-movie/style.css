@@ -1,0 +1,186 @@
+body {
+    background-color: black;
+    color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+#header {
+    text-align: center;
+}
+
+#nav {
+    margin-top: 10px;
+}
+
+#nav a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: cyan;
+}
+
+#nav a:hover {
+    color: yellow;
+}
+
+h1 {
+    animation: fadeIn 2s;
+}
+
+
+#content {
+    margin-top: 20px;
+}
+
+.info {
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.character img {
+    border-radius: 50%;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+#footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 10px;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid gray;
+    margin: 20px 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* SPLIT HOME PAGE */
+.split-container {
+    display: flex;
+    min-height: 500px;
+}
+
+.split {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.split:hover {
+    transform: scale(1.02);
+}
+
+/* INTERSTELLAR SIDE */
+.interstellar-side {
+    background: radial-gradient(circle, #000000, #0b1a2a);
+    color: #e0e6ed;
+}
+
+.interstellar-side .info {
+    background-color: #111a22;
+    border-color: #8ab4f8;
+}
+
+/* TRON SIDE (RED) */
+.tron-side {
+    background-color: #0d0d0d;
+    color: #ff3b3b;
+}
+
+.tron-side .info {
+    background-color: #111;
+    border-color: #ff3b3b;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.tron-side h2 {
+    text-shadow: 0 0 10px #ff3b3b;
+}
+
+/* INTERSTELLAR FULL PAGE */
+body.interstellar {
+    background: radial-gradient(circle, #000000, #0b1a2a);
+    color: #e0e6ed;
+}
+
+body.interstellar #nav a {
+    color: #8ab4f8;
+}
+
+body.interstellar #nav a:hover {
+    color: black;
+    text-shadow: 0 0 10px white;
+}
+
+body.interstellar .info {
+    background-color: #111a22;
+    border-color: #8ab4f8;
+}
+
+body.interstellar hr {
+    border-color: #2c3e50;
+}
+
+/* TRON FULL PAGE (RED) */
+body.tron {
+    background-color: #0d0d0d;
+    color: #ff3b3b;
+}
+
+body.tron #nav a {
+    color: #ff4d4d;
+}
+
+body.tron #nav a:hover {
+    color: blue;
+    text-shadow: 0 0 8px #ff3b3b;
+}
+
+body.tron h1 {
+    text-shadow: 0 0 10px #ff3b3b;
+}
+
+body.tron hr {
+    border-color: #ff3b3b;
+}
+
+body.tron .info {
+    background-color: #111;
+    border-color: #ff3b3b;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
