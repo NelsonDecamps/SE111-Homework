@@ -2,6 +2,7 @@ body {
     background-color: black;
     color: white;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -84,8 +85,13 @@ hr {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* SPLIT HOME PAGE */
