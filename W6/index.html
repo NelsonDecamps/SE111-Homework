@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nelson Decamps" 
+    <title>Week 6 | Homework Pay Calculator </title>
+</head>
+<body>
+
+     <H1>Welcome To Your Pay Calculator</H1>
+    <h2> Here are your results</h2>
+
+    <p id="output"></p>
+
+    <script>
+    
+    alert("Welcome to your pay calculator")
+    
+    var hourlyPay = Number (prompt ("What is your hourly payrate?"))
+    var hoursWorked = Number (prompt("How many hours did you work?"))
+    var taxRate = Number (prompt("Enter tax rate as decimal Ex: 0.20 for 20%"))
+    var gross = grossPay(hourlyPay, hoursWorked)
+    var tax = uncleSam(gross, taxRate)
+    var net = netPay(gross, tax)
+
+
+    function grossPay (hourlyPay, hoursWorked)
+    {
+        return hourlyPay * hoursWorked * 2
+    }
+
+    function uncleSam (grossPay,taxRate)
+    {
+        return grossPay * taxRate
+    }
+
+    function netPay (grossPay, uncleSam)
+    {
+        return grossPay - uncleSam
+    }
+
+    alert
+    (
+        "Gross Pay: $" + gross.toFixed(2) + "\n" +
+        "Uncle Sam's Share: $" + tax.toFixed(2) + "\n" +
+        "Net Pay: $" + net.toFixed(2)
+    ) 
+
+    console.log("Gross Pay:$" + gross.toFixed(2))
+    console.log("Uncle Sam:$" + tax.toFixed(2))
+    console.log("Net Pay:$" + net.toFixed(2))
+
+
+    document.getElementById("output").innerHTML =
+    "Gross Pay: $" + gross.toFixed(2) + "<br>" +
+    "Uncle Sam's Share: $" + tax.toFixed(2) + "<br>" +
+    "Net Pay: $" + net.toFixed(2);
+
+
+    </script>
+
+</body>
+</html>
